@@ -7,24 +7,48 @@
 
 .header {
     background: var(--header-bg-color);
-
-    @include abstract.breakpoint(lg) {
-        width: 100px;
-    }
 }
 
-.top-bar {
+.top--bar {
     @extend %flexItemCenter;
     padding: 30px 0;
+
+    @include abstract.breakpoint(lg) {
+        padding: 20px 0;
+    }
+
+    @include abstract.breakpoint(sm) {
+        padding: 16px 0;
+    }
+
+    &__more {
+        display: none;
+
+        @include abstract.breakpoint(lg) {
+            display: block;
+        }
+    }
+
+   
 }
+
 
 .navbar {
     margin-left: 144px;
-    margin-right: auto;
+
+    @include abstract.breakpoint(xl) {
+        margin-left: 50px;
+    }
+
+    @include abstract.breakpoint(lg) {
+        display: none;
+    }
+
     &__list {
         @extend %flexItemCenter;
         gap: 30px;
     }
+
 
     &__link {
         display: flex;
@@ -40,7 +64,10 @@
 
 .top--action {
     @extend %flexItemCenter;
+    margin-left: auto;
     gap: 20px;
+
+
     &__group {
         display: flex;
         min-width: 50px;
@@ -48,6 +75,16 @@
         border-radius: 8px;
         background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
+
+        @include abstract.breakpoint(md) {
+            display: none;
+        }
+    }
+
+    &__group--single {
+        @include abstract.breakpoint(lg) {
+            display: none;
+        }
     }
 
     &__group--single &__btn {
