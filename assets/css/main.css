@@ -133,6 +133,48 @@ table {
   border-spacing: 0;
 }
 
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #1A162E;
+  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(16%)
+  saturate(2740%) hue-rotate(212deg) brightness(99%) contrast(95%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Godirta, sans-serif;
+  color: var(--text-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  color: inherit;
+}
+
+.icon {
+  filter: var(--icon-color);
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -1163,6 +1205,87 @@ table {
   .gy-xxl-5 {
     --grid-gutter-y: 90px;
   }
+}
+.top--action__btn, .top--action, .navbar__list, .top-bar {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  background-color: #eee;
+}
+
+.top-bar {
+  padding: 30px 0;
+}
+
+.navbar {
+  margin-left: 144px;
+  margin-right: auto;
+}
+.navbar__list {
+  gap: 30px;
+}
+.navbar__link {
+  display: flex;
+  gap: 6px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.navbar__arrow {
+  margin-top: 3px;
+}
+
+.top--action {
+  gap: 20px;
+}
+.top--action__group {
+  display: flex;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background: var(--Secondary-Color-Background, #fff);
+  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+}
+.top--action__group--single .top--action__btn {
+  padding: 13px;
+}
+.top--action__btn {
+  gap: 10px;
+  padding: 13px 20px;
+  cursor: pointer;
+}
+.top--action__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.top--action__separete {
+  width: 1px;
+  height: 30px;
+  background-color: #ededf6;
+  margin-top: 10px;
+}
+.top--action__avatar {
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logo__title {
+  color: #1A162E;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 145.455%;
 }
 
 /*# sourceMappingURL=main.css.map */
