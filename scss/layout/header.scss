@@ -1,10 +1,16 @@
+@use "../abstract";
+
 %flexItemCenter {
     display: flex;
     align-items: center;
 }
 
 .header {
-   background: var(--header-bg-color);
+    background: var(--header-bg-color);
+
+    @include abstract.breakpoint(lg) {
+        width: 100px;
+    }
 }
 
 .top-bar {
