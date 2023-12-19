@@ -19,6 +19,7 @@
 
     @include abstract.breakpoint(sm) {
         padding: 16px 0;
+        justify-content: space-between;
     }
 
     &__more {
@@ -64,9 +65,12 @@
 
 .top--action {
     @extend %flexItemCenter;
-    margin-left: auto;
     gap: 20px;
+    margin-left: auto;
 
+    @include abstract.breakpoint(md) {
+       margin-left: 0;
+    }
 
     &__group {
         display: flex;

@@ -11,6 +11,9 @@
         margin-left: 39px;
     }
 
+    @include abstract.breakpoint(sm) {
+        margin-left: 0;
+    }
     &__img {
          @include abstract.breakpoint(lg) {
             width: 24px;

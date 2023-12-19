@@ -18,6 +18,7 @@
 @media (max-width: 575.98px) {
   .top--bar {
     padding: 16px 0;
+    justify-content: space-between;
   }
 }
 .top--bar__more {
@@ -57,8 +58,13 @@
 }
 
 .top--action {
-  margin-left: auto;
   gap: 20px;
+  margin-left: auto;
+}
+@media (max-width: 767.98px) {
+  .top--action {
+    margin-left: 0;
+  }
 }
 .top--action__group {
   display: flex;
