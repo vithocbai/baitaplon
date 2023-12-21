@@ -6,7 +6,7 @@
     align-items: center;
     gap: 14px;
    
-    @include abstract.breakpoint(lg) {
+    @include abstract.breakpoint(md) {
         gap: 10px;
         margin-left: 39px;
     }
@@ -14,6 +14,11 @@
     @include abstract.breakpoint(sm) {
         margin-left: 0;
     }
+
+    @include abstract.breakpoint(lg) {
+        margin-left: 14px;
+    }
+    
     &__img {
          @include abstract.breakpoint(lg) {
             width: 24px;
