@@ -5,14 +5,13 @@
     // display: none;
     width: min(1240px, 100%);
     &__inner {
-        --inner-max-height: min(582px, 100vh - 158px);
         --inner-padding: 30px;
         position: relative;
         padding: var(--inner-padding);
         border-radius: 20px;
         background: var(--dropdown-bg-color);
         box-shadow: 0px 40px 90px 20px var(--dropdown-shadow);
-        max-height: min(var(--inner-max-height));
+        height: min(582px, 100vh - 158px);
 
         &::before {
             content: url("../icons/dropdown-arrow.svg");
@@ -26,11 +25,12 @@
 }
 
 .top--menu {
-    height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
+    --main-column-width: 292px;
+    position: relative;
 
     &__main {
-        width: 292px;
-        height: inherit;
+        width: var(--main-column-width);
+        height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
         border-right: 1px solid var(--top--menu-border-color);
         overflow-y: auto;
     }
@@ -39,7 +39,9 @@
 .menu--column {
     display: flex;
     gap: 14px;
-
+    + .menu--column {
+        margin-top: var(--inner-padding);
+    }
     &__content {
         flex: 1;
     }
@@ -78,17 +80,33 @@
         margin-top: 19px;
     }
 
+    &__item {
+        &:hover .sub--menu {
+            display: grid;
+        }
+    }
+
+    &__item:hover > &__link {
+        color: var(--top--menu-link-hover);
+        font-weight: 500;
+    }
+
     &__link {
         display: block;
         padding: 7px 0;
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 142.857%;
-        &:hover {
-            color: var(--top--menu-link-hover);
-            font-weight: 500;
-        }
     }
+}
 
-   
+.sub--menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--inner-padding);
+    position: absolute;
+    inset: 0 0 0 var(--main-column-width);
+    padding-left: var(--inner-padding);
+    overflow-y: auto;
+    display: none;
 }
