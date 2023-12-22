@@ -1,3 +1,6 @@
+
+@use "../abstract"; 
+
 .dropdown {
     position: absolute;
     left: 0;
@@ -40,7 +43,7 @@
     display: flex;
     gap: 14px;
     + .menu--column {
-        margin-top: var(--inner-padding);
+        margin-top: 22px;
     }
     &__content {
         flex: 1;
@@ -51,12 +54,15 @@
         flex-shrink: 0;
         width: 36px;
         height: 36px;
+        @include abstract.breakpoint(xl) {
+            display: none;
+        }
     }
 
     &__icon-1 {
         width: 30px;
         height: 30px;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     &__icon-2 {
@@ -65,7 +71,7 @@
         bottom: 0;
         width: 24px;
         height: 24px;
-        object-fit: cover;
+        object-fit: contain;
         filter: var(--menu-column-icon-color);
     }
 
