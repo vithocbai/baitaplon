@@ -1,11 +1,10 @@
-
-@use "../abstract"; 
+@use "../abstract";
 
 .dropdown {
     position: absolute;
     left: 0;
     padding-top: 54px;
-    // display: none;
+    display: none;
     width: min(1240px, 100%);
     &__inner {
         --inner-padding: 30px;
@@ -29,11 +28,12 @@
 
 .top--menu {
     --main-column-width: 292px;
+    --max-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
     position: relative;
 
     &__main {
         width: var(--main-column-width);
-        height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+        height: var(--max-height);
         border-right: 1px solid var(--top--menu-border-color);
         overflow-y: auto;
     }
@@ -91,7 +91,7 @@
             display: grid;
         }
     }
-
+    
     &__item:hover > &__link {
         color: var(--top--menu-link-hover);
         font-weight: 500;
@@ -115,4 +115,13 @@
     padding-left: var(--inner-padding);
     overflow-y: auto;
     display: none;
+
+    &--not--main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) ;
+        inset: initial;
+        position: initial;
+        height: var(--max-height);
+        padding-left: 0;
+    }
 }

@@ -1411,6 +1411,7 @@ html {
   position: absolute;
   left: 0;
   padding-top: 54px;
+  display: none;
   width: min(1240px, 100%);
 }
 .dropdown__inner {
@@ -1433,11 +1434,12 @@ html {
 
 .top--menu {
   --main-column-width: 292px;
+  --max-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
   position: relative;
 }
 .top--menu__main {
   width: var(--main-column-width);
-  height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+  height: var(--max-height);
   border-right: 1px solid var(--top--menu-border-color);
   overflow-y: auto;
 }
@@ -1510,6 +1512,14 @@ html {
   padding-left: var(--inner-padding);
   overflow-y: auto;
   display: none;
+}
+.sub--menu--not--main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  inset: initial;
+  position: initial;
+  height: var(--max-height);
+  padding-left: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
