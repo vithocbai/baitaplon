@@ -32,14 +32,6 @@
     justify-content: space-between;
   }
 }
-.top--bar__more {
-  display: none;
-}
-@media (max-width: 991.98px) {
-  .top--bar__more {
-    display: block;
-  }
-}
 
 .navbar {
   margin-left: 129px;
@@ -148,11 +140,6 @@
   border-radius: 8px;
   background: var(--top-act-group-bg-color);
   box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
-}
-@media (max-width: 767.98px) {
-  .top--action__group {
-    display: none;
-  }
 }
 @media (max-width: 991.98px) {
   .top--action__group--single {

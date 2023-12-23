@@ -30,13 +30,7 @@
         justify-content: space-between;
     }
 
-    &__more {
-        display: none;
-
-        @include abstract.breakpoint(lg) {
-            display: block;
-        }
-    }
+   
 }
 
 .navbar {
@@ -150,9 +144,6 @@
         background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
 
-        @include abstract.breakpoint(md) {
-            display: none;
-        }
     }
 
     &__group--single {
