@@ -1,10 +1,8 @@
 @use "../abstract";
 
-
 %flexItemCenter {
     display: flex;
     align-items: center;
-    
 }
 
 .header {
@@ -39,9 +37,7 @@
             display: block;
         }
     }
-   
 }
-
 
 .navbar {
     margin-left: 129px;
@@ -51,31 +47,89 @@
     }
 
     @include abstract.breakpoint(lg) {
+        // display: none;
+        position: fixed;
+        inset: 0 50% 0 0;
+        background: #fff;
+        margin-left: 0;
+        z-index: 9;
+        padding: 20px 0;
+        translate: -100%;
+        transition: translate 0.5s;
+        &.show {
+            translate: 0
+        }
+
+        &.show ~ &__overlay {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    
+    &__close--btn {
         display: none;
+        @include abstract.breakpoint(lg) {
+            display: block;
+            padding: 10px 40px;
+        }
+    }
+
+    &__overlay {
+        visibility: hidden;
+        opacity: 0;
+
+        @include abstract.breakpoint(lg) {
+            transition: opacity, visibility;
+            transition-duration: 0.5s;
+            position: fixed;
+            z-index: 8;
+            inset: 0;
+            background: rgba($color: #000000, $alpha: 0.4);
+        }
     }
 
     &__list {
         @extend %flexItemCenter;
-        height: 50px;
+        @include abstract.breakpoint(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__item {
         &:hover .dropdown {
             display: block;
         }
+        @include abstract.breakpoint(lg) {
+            &:hover .dropdown {
+                display: none;
+            }
+            width: 100%;
+        }
     }
-    
 
     &__link {
         display: flex;
+        align-items: center;
         gap: 6px;
         font-size: 1.5rem;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 146.667%;
         padding: 0 15px;
+        height: 50px;
+        @include abstract.breakpoint(lg) {
+            justify-content: space-between;
+            padding: 0 40px;
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
     }
+
     &__arrow {
         margin-top: 3px;
+        width: 12px;
+        height: 12px;
     }
 }
 
@@ -85,7 +139,7 @@
     margin-left: auto;
 
     @include abstract.breakpoint(md) {
-       margin-left: 0;
+        margin-left: 0;
     }
 
     &__group {

@@ -26,9 +26,11 @@ button {
     background-color: transparent;
 }
 
-button, input, textarea, select {
+// a và img chỉ highlight color khi sd tren pc 
+a,img ,button, input, textarea, select{
     font-family: inherit;
     color: inherit;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .icon {
