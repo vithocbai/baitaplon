@@ -3,6 +3,12 @@
 .dropdown {
     position: absolute;
     left: 0;
+    @include abstract.breakpoint(lg) {
+        position: initial;
+        display: block;
+        padding-top: 0;
+    }
+
     padding-top: 54px;
     display: none;
     width: min(1240px, 100%);
@@ -23,6 +29,17 @@
             translate: -50%;
             filter: var(--dropdown-arrow-color);
         }
+
+        @include abstract.breakpoint(lg) {
+            border-radius: none;
+            background: none;
+            box-shadow: none;
+            padding: 0 40px;
+            height: auto;
+        }
+        &::before {
+            content: none;
+        }
     }
 }
 
@@ -36,6 +53,11 @@
         height: var(--max-height);
         border-right: 1px solid var(--top--menu-border-color);
         overflow-y: auto;
+        @include abstract.breakpoint(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 }
 
@@ -45,6 +67,11 @@
     + .menu--column {
         margin-top: 22px;
     }
+
+    @include abstract.breakpoint(lg) {
+       margin-top: 10px;
+    }
+
     &__content {
         flex: 1;
     }
@@ -56,6 +83,9 @@
         height: 36px;
         @include abstract.breakpoint(xl) {
             display: none;
+        }
+        @include abstract.breakpoint(lg) {
+            display: block;
         }
     }
 
@@ -80,11 +110,19 @@
         font-size: 1.6rem;
         font-weight: 600;
         line-height: 150%;
+        @include abstract.breakpoint(lg) {
+            margin-bottom: 20px;
+        }
     }
 
     &__list {
         margin-top: 19px;
+        @include abstract.breakpoint(lg) {
+            margin-top: 0;
+        }
     }
+    
+    
 
     &__item {
         &:hover .sub--menu {
@@ -115,7 +153,12 @@
     padding-left: var(--inner-padding);
     overflow-y: auto;
     display: none;
-
+    @include abstract.breakpoint(lg) {
+        position: initial;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 0;
+    }
     &--not--main {
         display: grid;
         grid-template-columns: repeat(4, 1fr) ;
