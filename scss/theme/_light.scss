@@ -9,8 +9,6 @@ html {
     --top-act-group-bg-color: #fff;
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-group-separate: #ededf6;
-    --sidebar-bg: #fff;
-    --sidebar-shadow: rgba(200, 200, 200, 0.40);
     @include abstract.breakpoint(lg) {
         --header-bg-color: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.20);
@@ -21,4 +19,9 @@ html {
     --dropdown-shadow: rgba(200, 200, 200, 0.4);
     --top--menu-border-color: #D2D1D6;
     --top--menu-link-hover: #0071DC;
+
+    // Sidebar
+    --sidebar-bg: #fff;
+    --sidebar-shadow: rgba(200, 200, 200, 0.40);
+    
 }
