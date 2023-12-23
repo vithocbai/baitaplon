@@ -119,17 +119,25 @@
         margin-top: 19px;
         @include abstract.breakpoint(lg) {
             margin-top: 0;
+            
         }
     }
     
     
 
     &__item {
-        &:hover .sub--menu {
+        // &:hover .sub--menu {
+        //     display: grid;
+        // }
+        &--active .sub--menu {
             display: grid;
+        }
+        @include abstract.breakpoint(lg) {
+           
         }
     }
     
+    &__item--active > &__link,
     &__item:hover > &__link {
         color: var(--top--menu-link-hover);
         font-weight: 500;
@@ -155,9 +163,9 @@
     display: none;
     @include abstract.breakpoint(lg) {
         position: initial;
-        display: grid;
         grid-template-columns: repeat(1, 1fr);
         padding-left: 0;
+       
     }
     &--not--main {
         display: grid;
@@ -166,5 +174,9 @@
         position: initial;
         height: var(--max-height);
         padding-left: 0;
+        @include abstract.breakpoint(lg) {
+           grid-template-columns: repeat(1, 1fr);
+           height: auto;
+        }
     }
 }
