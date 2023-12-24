@@ -42,13 +42,42 @@
         <script src="./assets/js/script.js"></script>
     </head>
     <body>
+        <!-- header -->
         <header id="header" class="header"></header>
         <script>
             load("header", "./templates/header.html");
         </script>
         <div class="container">
-            <h1>home page</h1>
+            <!-- Slideshow -->
+            <div class="slideshow">
+                <div class="slideshow__inner">
+                    <div class="slideshow__item">
+                        <img src="./assets/img/slideshow/item-01.png" alt="" class="slideshow__img">
+                    </div>
+                    <div class="slideshow__item">
+                        <img src="./assets/img/slideshow/item-01.png" alt="" class="slideshow__img">
+                    </div>
+                    <div class="slideshow__item">
+                        <img src="./assets/img/slideshow/item-01.png" alt="" class="slideshow__img">
+                    </div>
+                    <div class="slideshow__item">
+                        <img src="./assets/img/slideshow/item-01.png" alt="" class="slideshow__img">
+                    </div>
+                    <div class="slideshow__item">
+                        <img src="./assets/img/slideshow/item-01.png" alt="" class="slideshow__img">
+                    </div>
+                    <div class="slideshow__item">
+                        <img src="./assets/img/slideshow/item-01.png" alt="" class="slideshow__img">
+                    </div>
 
+                    <div class="slideshow__page">
+                        <span class="slideshow__number">1</span>
+                        <span class="slideshow__slider"></span>
+                        <span class="slideshow__number">5</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
             <footer id="footer"></footer>
             <script>
                 load("footer", "./templates/footer.html");
