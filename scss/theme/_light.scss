@@ -4,24 +4,23 @@ html {
     --text-color: #1a162e;
     --icon-color: brightness(0) saturate(100%) invert(7%) sepia(16%)
         saturate(2740%) hue-rotate(212deg) brightness(99%) contrast(95%);
-    --body-color: #FAFAFD;
+    --body-color: #fafafd;
     --header-bg-color: #eee;
     --top-act-group-bg-color: #fff;
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-group-separate: #ededf6;
-    @include abstract.breakpoint(lg) {
+    @include abstract.screen(lg) {
         --header-bg-color: #fff;
-        --header-shadow-color: rgba(237, 237, 246, 0.20);
+        --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
 
     // Dropdown
     --dropdown-bg-color: #fff;
     --dropdown-shadow: rgba(200, 200, 200, 0.4);
-    --top--menu-border-color: #D2D1D6;
-    --top--menu-link-hover: #0071DC;
+    --top--menu-border-color: #d2d1d6;
+    --top--menu-link-hover: #0071dc;
 
     // Sidebar
     --sidebar-bg: #fff;
-    --sidebar-shadow: rgba(200, 200, 200, 0.40);
-    
+    --sidebar-shadow: rgba(200, 200, 200, 0.4);
 }

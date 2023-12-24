@@ -9,7 +9,7 @@ html.dark {
     --top-act-group-bg-color: #292e39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
     --top-act-group-separate: #ededf6;
-    @include abstract.breakpoint(lg) {
+    @include abstract.screen(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
     // Dropdown
@@ -23,7 +23,7 @@ html.dark {
         contrast(96%);
 
     // Sidebar
-    --sidebar-bg: #292E39;
-    --sidebar-shadow: rgba(23, 28, 40, 0.40);
-    --sidebar-title-color: #B9BABE;
+    --sidebar-bg: #292e39;
+    --sidebar-shadow: rgba(23, 28, 40, 0.4);
+    --sidebar-title-color: #b9babe;
 }

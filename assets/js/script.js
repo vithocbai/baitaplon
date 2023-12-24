@@ -210,5 +210,5 @@ function next() {
     document.getElementById("desc").innerText = arr_mota[index];
 }
 
-// setInterval("next()", 4000);
+setInterval("next()", 4000);
 
