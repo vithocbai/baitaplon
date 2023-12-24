@@ -168,7 +168,7 @@ function initJsToggle() {
     });
 }
 
-// dùng cho khi actice menu hide and show 
+// dùng cho khi actice menu hide and show
 window.addEventListener("template-loaded", () => {
     const links = $$(".js-dropdown-list > li > a");
 
@@ -180,3 +180,35 @@ window.addEventListener("template-loaded", () => {
         };
     });
 });
+
+// slide show
+var arr_hinh = [
+    "./assets/img/slideshow/item-01.png",
+    "./assets/img/slideshow/item-02.png",
+    "./assets/img/slideshow/item-03.png",
+];
+
+var arr_mota = [
+    "Coffee – the Anchor of Dreams",
+    "Coffee – the Companion of the Heart and Soul",
+    "Coffee – the Motivation to Start a New Day.",
+];
+
+var index = 0;
+function prev() {
+    index--;
+    if (index < 0) index = arr_hinh.length - 1;
+
+    document.getElementById("slideshow__img").src = arr_hinh[index];
+    document.getElementById("desc").innerText = arr_mota[index];
+}
+
+function next() {
+    index++;
+    if (index == arr_hinh.length) index = 0;
+    document.getElementById("slideshow__img").src = arr_hinh[index];
+    document.getElementById("desc").innerText = arr_mota[index];
+}
+
+// setInterval("next()", 4000);
+

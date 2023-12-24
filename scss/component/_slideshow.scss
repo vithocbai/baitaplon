@@ -1,63 +1,88 @@
+@use "../abstract";
+
 .slideshow {
     position: relative;
     margin: 40px 0;
+   
     &__inner {
         display: flex;
         overflow: hidden;
     }
 
     &__item {
-        flex-shrink: 0;
         width: 100%;
+        flex-shrink: 0;
+        position: relative;
+        padding-top: 34%;
+        @include abstract.breakpoint(md) {
+            padding-top: 50%;
+        } 
     }
 
     &__img {
-        width: 100%;
-    }
-
-    &__page {
-        --color: #fff;
         position: absolute;
-        left: 70px;
-        bottom: 70px;
-        display: flex;
-        align-items: center;
-        column-gap: 22px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        @include abstract.breakpoint(md) {
+            
+            
+        } 
     }
 
-    &__number {
-        color: var(--color);
-        font-size: 1.8rem;
-        font-weight: 500;
-        line-height: 144.444%;
+    &__desc {
+        position: absolute;
+        bottom: 15%;
+        left: 28%;
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: transparent;
+        background-color: #4158D0;
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        @include abstract.breakpoint(lg) {
+            font-size: 1.5rem;
+        } 
+        @include abstract.breakpoint(md) {
+            display: none;
+        } 
+       
     }
 
-    &__slider {
-        position: relative;
-        width: 172px;
-        height: 4px;
-        flex-shrink: 0;
-        background: var(--color);
+    &__prev-icon {
+        width: 50px;
+        height: 50px;
+        background-color: #52ACFF;
+        background-image: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%);
+        border-radius: 50%;
+        position: absolute;
+        font-size: 2.8rem;
+        color: #FBDA61;
+        @include abstract.breakpoint(lg) {
+            width: 40px;
+            height: 40px;
+            font-size: 1.8rem;
+        } 
+        @include abstract.breakpoint(md) {
+           display: none;
+        } 
+       
+    }
 
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            width: 14px;
-            height: 14px;
-            border: 4px solid var(--color);
-            border-radius: 50%;
-        }
+    &__prev {
+        left: 2%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
-        &::before {
-            left: 0;
-            translate: -90% -50%;
-        }
-
-        &::after {
-            right: 0;
-            translate: 90% -50%;
-        }
+    &__next {
+        right: 2%;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
