@@ -2,12 +2,6 @@
 
 .slideshow {
     position: relative;
-    margin: 40px 0;
-
-    &__inner {
-        display: flex;
-        overflow: hidden;
-    }
 
     &__item {
         width: 100%;
@@ -27,8 +21,7 @@
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
-        @include abstract.screen(md) {
-        }
+        transition: opacity 0.5s ease-in-out; 
     }
 
     &__desc {
@@ -65,6 +58,7 @@
         position: absolute;
         font-size: 2.8rem;
         color: #fbda61;
+        cursor: pointer;
         @include abstract.screen(lg) {
             width: 40px;
             height: 40px;

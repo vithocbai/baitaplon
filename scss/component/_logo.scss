@@ -10,14 +10,13 @@
         margin-left: 39px;
     }
 
-    @include abstract.screen(sm) {
-        margin-left: 0;
-    }
-
     @include abstract.screen(lg) {
         margin-left: 14px;
     }
-
+    
+    @include abstract.screen(sm) {
+        margin-left: 0;
+    }
     &__img {
         @include abstract.screen(lg) {
             width: 24px;

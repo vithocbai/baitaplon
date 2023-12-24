@@ -1,0 +1,29 @@
+@use "../abstract";
+
+.home {
+    margin-top: 40px;
+    @include abstract.screen(lg) {
+        margin-top: 30px;
+    }
+
+    
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+        margin: 40px 0 20px;
+       
+    }
+
+    &__cate {
+        --grid-gutter-x: 51px; 
+        
+        @include abstract.screen(lg) {
+            --grid-gutter-x: 24px; 
+        }
+
+        @include abstract.screen(lg) {
+            --grid-gutter-y: 20px; 
+        }
+    }
+}

@@ -195,20 +195,27 @@ var arr_mota = [
 ];
 
 var index = 0;
+
 function prev() {
     index--;
     if (index < 0) index = arr_hinh.length - 1;
-
-    document.getElementById("slideshow__img").src = arr_hinh[index];
-    document.getElementById("desc").innerText = arr_mota[index];
+    updateSlideshow();
 }
 
 function next() {
     index++;
     if (index == arr_hinh.length) index = 0;
-    document.getElementById("slideshow__img").src = arr_hinh[index];
-    document.getElementById("desc").innerText = arr_mota[index];
+    updateSlideshow();
 }
 
-setInterval("next()", 4000);
+function updateSlideshow() {
+    document.getElementById("slideshow__img").style.opacity = 0.8;
 
+    setTimeout(function () {
+        document.getElementById("slideshow__img").src = arr_hinh[index];
+        document.getElementById("desc").innerText = arr_mota[index];
+        document.getElementById("slideshow__img").style.opacity = 1;
+    }, 500);
+}
+
+setInterval(next, 5000);
