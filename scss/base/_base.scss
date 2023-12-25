@@ -27,6 +27,9 @@ button{
     cursor: pointer;
 }
 
+input {
+    background: transparent;
+}
 // a và img chỉ highlight color khi sd tren pc 
 a,img ,button, input, textarea, select{
     font-family: inherit;

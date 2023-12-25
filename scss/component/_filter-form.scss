@@ -1,3 +1,5 @@
+@use "../abstract";
+
 .filter-wrap {
     position: relative;
     z-index: 1;
@@ -14,13 +16,33 @@
 
     background: var(--filter-form-bg);
     filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
+    transition: opacity, visibility;
+    transition-duration: 0.4s;
+
+    @include abstract.screen(xl) {
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+        padding-bottom: 0;
+        overscroll-behavior: contain;
+    }
+
+    @include abstract.screen(sm) {
+        width: 85vw;
+    }
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
 
     &__arrow {
         position: absolute;
         height: 22.5px;
         top: -16px;
         right: 18px;
+        filter: var(--filter-form-arrow);
     }
+
     &__heading {
         font-size: 2.2rem;
         font-weight: 500;
@@ -105,14 +127,23 @@
             padding: 0 16px;
 
             &::placeholder {
-                color: #9E9DA8;
+                color: #9e9da8;
                 font-weight: 400;
+            }
+
+            @include abstract.screen(sm) {
+                width: 100%;
             }
 
             &--small {
                 width: 121px;
                 height: 36px;
                 padding: 0 12px;
+
+                @include abstract.screen(sm) {
+                    width: 100%;
+                }
+    
             }
         }
 
@@ -154,13 +185,14 @@
         }
 
         &-tag {
+            padding: 6px 12px;
             font-size: 1.4rem;
             font-weight: 500;
             line-height: 142.857%;
             border-radius: 6px;
-            color: #9E9DA8;
+            color: #9e9da8;
             background: var(--filter-form-tag-color);
-            transition: color 0,2s;
+            transition: color 0, 2s;
             &:hover {
                 color: var(--text-color);
             }
@@ -176,6 +208,11 @@
         width: 1px;
         margin: 0 30px;
         background: #eee;
+        @include abstract.screen(xl) {
+           width: 100%;
+           height: 1px;
+           margin: 30px 0;
+        }
     }
 
     &__footer {
@@ -183,5 +220,18 @@
         align-items: center;
         justify-content: flex-end;
         margin-top: 32px;
+        @include abstract.screen(xl) {
+            position: sticky;
+            bottom: 0;
+            background: var(--footer-form-color);
+            padding-bottom: 16px;
+        }
+    }
+
+    &__content {
+        @include abstract.screen(xl) {
+            flex-direction: column;
+           
+        }
     }
 }

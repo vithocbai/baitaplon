@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,7 +48,7 @@
         <!-- Script -->
         <script src="./assets/js/script.js"></script>
     </head>
-    <body>
+    <body style="height: 2000px;">
         <!-- header -->
         <header id="header" class="header"></header>
         <script>
@@ -164,7 +164,7 @@
                 <div class="home__row">
                     <h2 class="home__heading">Total LavAzza 1320</h2>
                     <div class="filter-wrap">
-                        <button class="filter-btn">
+                        <button class="filter-btn js-toggle" toggle-target="#home-filter">
                             Filter
                             <img
                                 src="./assets/icons/filter.svg"
@@ -173,11 +173,11 @@
                             />
                         </button>
 
-                        <div class="filter">
+                        <div id="home-filter" class="filter hide">
                             <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow">
                             <h3 cla ss="filter__heading">Filter</h3>
                             <form action="" class="filter__form">
-                                <div class="filter__row">
+                                <div class="filter__row filter__content">
                                     <!-- Filter column 1 -->
                                     <div class="filter__col">
                                         <label for="" class="filter__form-label"
@@ -256,7 +256,7 @@
                                                     <img
                                                         src="./assets/icons/select-arrow.svg"
                                                         alt=""
-                                                        class="fliter__form-select-arrow"
+                                                        class="fliter__form-select-arrow icon"
                                                     />
                                                 </div>
                                                 <div
@@ -266,7 +266,7 @@
                                                     <img
                                                         src="./assets/icons/select-arrow.svg"
                                                         alt=""
-                                                        class="fliter__form-select-arrow"
+                                                        class="fliter__form-select-arrow icon"
                                                     />
                                                 </div>
                                             </div>
@@ -313,7 +313,7 @@
                                                 <img
                                                     src="./assets/icons/search.svg"
                                                     alt=""
-                                                    class="filter__form-input-icon"
+                                                    class="filter__form-input-icon icon"
                                                 />
                                             </div>
                                         </div>
@@ -340,8 +340,8 @@
                                 </div>
                                 <div class="filter__row filter__footer">
 
-                                    <button class="btn btn btn--text btn--cancel">Cancel</button>
-                                    <button class="btn btn btn--primary btn--sunmit">Show Result</button>
+                                    <button class="btn btn btn--text btn--cancel js-toggle" toggle-target="#home-filter">Cancel</button>
+                                    <button class="btn btn btn--primary btn--sunmit js-toggle" toggle-target="#home-filter">Show Result</button>
                                    
                                 </div>
                             </form>
