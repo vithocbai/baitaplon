@@ -20,7 +20,7 @@
 
     &__cate {
         --grid-gutter-x: 51px; 
-        margin-top: 20px;
+       
         @include abstract.screen(lg) {
             --grid-gutter-x: 24px; 
         }
