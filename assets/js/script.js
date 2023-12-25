@@ -215,7 +215,7 @@ function updateSlideshow() {
         document.getElementById("slideshow__img").src = arr_hinh[index];
         document.getElementById("desc").innerText = arr_mota[index];
         document.getElementById("slideshow__img").style.opacity = 1;
-    }, 500);
+    }, 800);
 }
 
-setInterval(next, 5000);
+setInterval(next, 6000);
