@@ -22,17 +22,19 @@ a {
     text-decoration: none;
 }
 
-button {
-    border: none;
-    outline: none;
-    background-color: transparent;
+button{
+    background: transparent;
+    cursor: pointer;
 }
 
 // a và img chỉ highlight color khi sd tren pc 
 a,img ,button, input, textarea, select{
     font-family: inherit;
     color: inherit;
+    border: none;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
+    padding: 0;
 }
 
 .icon {
