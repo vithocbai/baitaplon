@@ -2010,6 +2010,51 @@ html {
   margin-top: 6px;
 }
 
+.btn {
+  height: 46px;
+  padding: 0 20px;
+  border-radius: 6px;
+  background: #f8f8fb;
+  font-size: 1.8rem;
+  font-weight: 500;
+  user-select: none;
+}
+.btn + .btn {
+  margin-left: 20px;
+}
+.btn--text {
+  background: transparent;
+  color: #9e9da8;
+  font-weight: 400;
+}
+.btn--primary {
+  background: #ffb700;
+}
+.btn--primary-disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.btn--ouline {
+  border: 1px solid #d2d1d6;
+  background: transparent;
+}
+.btn--rounded {
+  border-radius: 99px;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.btn--cancel, .btn--sunmit {
+  height: 38px;
+  padding: 0 10px;
+}
+.btn--cancel {
+  font-size: 1.5rem;
+}
+.btn--sunmit {
+  font-size: 1.4rem;
+}
+
 .product-card {
   padding: 16px;
   border-radius: 20px;
@@ -2064,11 +2109,17 @@ html {
 .filter {
   position: absolute;
   right: 0;
-  top: 50px;
+  top: 55px;
   padding: 30px;
   border-radius: 20px;
   background: var(--filter-form-bg);
   filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
+}
+.filter__arrow {
+  position: absolute;
+  height: 22.5px;
+  top: -16px;
+  right: 18px;
 }
 .filter__heading {
   font-size: 2.2rem;
@@ -2197,6 +2248,12 @@ html {
   width: 1px;
   margin: 0 30px;
   background: #eee;
+}
+.filter__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 32px;
 }
 
 .home {
