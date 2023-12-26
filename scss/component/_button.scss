@@ -87,6 +87,7 @@
         padding: 0 10px;
         @include abstract.screen(sm) {
             flex: 1;
+            height: 42px;
         }
     }
 
