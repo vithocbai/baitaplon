@@ -1,5 +1,4 @@
-
-@use '../abstract';
+@use "../abstract";
 
 // Filter Button
 .filter-btn {
@@ -41,6 +40,8 @@
 
 // Buttons
 .btn {
+    display: flex;
+    align-items: center;
     height: 46px;
     padding: 0 20px;
     border-radius: 6px;
@@ -59,7 +60,7 @@
     }
 
     &--primary {
-        color: #1A162E;
+        color: #1a162e;
         background: #ffb700;
     }
 
@@ -78,11 +79,11 @@
     }
 
     &:hover {
-        opacity: 0.9;
-      
+        opacity: 0.8;
     }
 
-    &--cancel,&--sunmit {
+    &--cancel,
+    &--sunmit {
         height: 38px;
         padding: 0 10px;
         @include abstract.screen(sm) {
@@ -99,5 +100,3 @@
         font-size: 1.4rem;
     }
 }
-
-

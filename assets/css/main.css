@@ -1714,6 +1714,14 @@ html {
     width: 60%;
   }
 }
+@media (max-width: 575.98px) {
+  .footer__input {
+    flex: 1;
+  }
+}
+.footer__input::placeholder {
+  font-weight: 600;
+}
 .footer__text {
   color: var(--fotter-color-text);
   padding: 8px 0;
@@ -1774,17 +1782,13 @@ html {
     height: 42px;
   }
 }
-.footer__socials-icon {
-  width: 14px;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
-}
 .footer__socials-link--facebook {
   background: #4863a9;
 }
 .footer__socials-link--youtobe {
   background: #f00;
 }
-.footer__socials-link--tiktok {
+.footer__socials-link_--tiktok {
   background: #000;
 }
 .footer__socials-link--twitter {
@@ -1792,6 +1796,19 @@ html {
 }
 .footer__socials-link--linkedin {
   background: #2f71ab;
+}
+.footer__socials-link:hover {
+  filter: grayscale(0);
+  translate: 0 -3px;
+}
+.footer__socials-icon {
+  width: 14px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
+}
+@media (max-width: 575.98px) {
+  .footer__socials-icon {
+    width: 18px;
+  }
 }
 
 .logo {
@@ -2193,6 +2210,8 @@ html {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
   height: 46px;
   padding: 0 20px;
   border-radius: 6px;
@@ -2210,7 +2229,7 @@ html {
   font-weight: 400;
 }
 .btn--primary {
-  color: #1A162E;
+  color: #1a162e;
   background: #ffb700;
 }
 .btn--primary-disable {
@@ -2225,7 +2244,7 @@ html {
   border-radius: 99px;
 }
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 .btn--cancel, .btn--sunmit {
   height: 38px;
@@ -2410,6 +2429,7 @@ html {
 @media (max-width: 575.98px) {
   .filter__form-text-input {
     width: 100%;
+    font-size: 1.6rem !important;
   }
 }
 .filter__form-text-input--small {

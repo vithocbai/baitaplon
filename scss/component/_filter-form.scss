@@ -118,6 +118,8 @@
             @include abstract.screen(sm) {
                 font-size: 1.6rem;
             }
+
+
         }
 
         &-text-input {
@@ -134,6 +136,7 @@
 
             @include abstract.screen(sm) {
                 width: 100%;
+                font-size: 1.6rem !important;
             }
 
             &--small {
