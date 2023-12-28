@@ -198,7 +198,7 @@
   font-weight: 500;
   line-height: 146.667%;
 }
-.top--action__separete {
+.top--action__ .top--action__separete {
   width: 1px;
   height: 30px;
   background-color: var(--top-act-group-separate);

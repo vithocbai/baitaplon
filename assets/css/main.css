@@ -1337,6 +1337,8 @@ html.dark {
   --filter-form-tag-color: #171c28;
   --filter-form-arrow: var(--dropdown-arrow-color);
   --footer-form-color: var(--dropdown-bg-color);
+  --fotter-color-text: #9e9da6;
+  --footer-bg-color: #171c28;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1354,6 +1356,7 @@ html {
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-group-separate: #ededf6;
+  --top-act-color-icon: #fff;
   --dropdown-bg-color: #fff;
   --dropdown-shadow: rgba(200, 200, 200, 0.4);
   --top--menu-border-color: #d2d1d6;
@@ -1584,7 +1587,7 @@ html {
   font-weight: 500;
   line-height: 146.667%;
 }
-.top--action__separete {
+.top--action__ .top--action__separete {
   width: 1px;
   height: 30px;
   background-color: var(--top-act-group-separate);
@@ -1620,6 +1623,175 @@ html {
 }
 .nav--btn__qtn {
   margin-left: auto;
+}
+
+.footer {
+  margin-top: 50px;
+  padding: 50px 0;
+  background: var(--footer-bg-color);
+}
+.footer__row {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+@media (max-width: 991.98px) {
+  .footer__row {
+    grid-template-columns: 1fr;
+  }
+}
+.footer__logo-box .logo {
+  margin-left: 0;
+}
+.footer__heading {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+.footer__desc {
+  margin-top: 30px;
+  line-height: 1.5;
+}
+@media (max-width: 991.98px) {
+  .footer__desc {
+    width: min(410px, 100%);
+  }
+}
+.footer__list {
+  margin-top: 18px;
+}
+.footer__help-text {
+  margin-top: 40px;
+  line-height: 1.4;
+}
+@media (max-width: 1199.98px) {
+  .footer__help-text {
+    margin-top: 20px;
+  }
+}
+.footer__lable {
+  margin-top: 20px;
+  font-weight: 500;
+}
+@media (max-width: 1199.98px) {
+  .footer__lable {
+    margin-top: 25px;
+  }
+}
+.footer__link {
+  display: inline-block;
+  padding: 8px 0;
+  line-height: 1.4;
+  font-size: 1.5rem;
+}
+.footer__link:hover {
+  color: #0071dc;
+}
+.footer__form {
+  display: flex;
+  gap: 10px;
+  padding: 16px 0;
+}
+@media (max-width: 1199.98px) {
+  .footer__form {
+    flex-direction: column;
+  }
+}
+@media (max-width: 991.98px) {
+  .footer__form {
+    flex-direction: row;
+  }
+}
+.footer__input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 2px solid #d2d1d6;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+@media (max-width: 991.98px) {
+  .footer__input {
+    width: 60%;
+  }
+}
+.footer__text {
+  color: var(--fotter-color-text);
+  padding: 8px 0;
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+}
+.footer__payments {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+.footer__seperate {
+  margin-top: 25px;
+  width: 98%;
+  height: 1px;
+  background: #000;
+}
+.footer__bottom {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767.98px) {
+  .footer__bottom {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+}
+.footer__copyright {
+  color: var(--fotter-color-text);
+}
+@media (max-width: 575.98px) {
+  .footer__copyright {
+    text-align: center;
+  }
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer__socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  filter: grayscale(50%);
+  transition: translate, filter;
+  transition-duration: 0.3s;
+}
+@media (max-width: 767.98px) {
+  .footer__socials-link {
+    width: 42px;
+    height: 42px;
+  }
+}
+.footer__socials-icon {
+  width: 14px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
+}
+.footer__socials-link--facebook {
+  background: #4863a9;
+}
+.footer__socials-link--youtobe {
+  background: #f00;
+}
+.footer__socials-link--tiktok {
+  background: #000;
+}
+.footer__socials-link--twitter {
+  background: #4999e6;
+}
+.footer__socials-link--linkedin {
+  background: #2f71ab;
 }
 
 .logo {
@@ -2073,6 +2245,9 @@ html {
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   padding: 16px;
   border-radius: 20px;
