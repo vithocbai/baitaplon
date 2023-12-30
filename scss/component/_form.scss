@@ -13,10 +13,9 @@ $error-color: #ed4337;
         }
 
         @include abstract.screen(sm) {
-           display: flex;
-           flex-direction: column;
-           gap: 10px;
-
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
     }
 
@@ -107,6 +106,71 @@ $error-color: #ed4337;
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 146.667%;
+        }
+    }
+
+    &__label {
+        display: block;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+
+        &--small {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            line-height: 142.857%;
+        }
+    }
+
+    &__select-wrap {
+        display: flex;
+        align-items: center;
+        height: 45px;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+    }
+
+    &__select {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: var(--width, 108px);
+        height: calc(100% - 10px);
+        padding: 0 14px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+        cursor: pointer;
+        @include abstract.screen(xl) {
+            flex: 1;
+        }
+    }
+
+    &__select + &__select {
+        border-left: 1px solid #d2d1d6;
+    }
+
+    &__tags {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        @include abstract.screen(sm) {
+            gap: 10px;
+        }
+    }
+
+    &__tag {
+        padding: 6px 12px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+        border-radius: 6px;
+        color: #9e9da8;
+        background: var(--form-tag-color);
+        transition: color 0.2s;
+        &:hover {
+            color: var(--text-color);
         }
     }
 }

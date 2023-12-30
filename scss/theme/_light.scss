@@ -26,29 +26,29 @@ html {
     --sidebar-bg: #fff;
     --sidebar-shadow: rgba(200, 200, 200, 0.4);
 
-    //Category item 
-    --cate-item-bg: #eee; 
+    //Category item
+    --cate-item-bg: #eee;
     --cate-item-thumb-bg: #fff;
     --cate-item-title-color: #000;
     @include abstract.screen(md) {
-        --cate-item-bg: #fff; 
+        --cate-item-bg: #fff;
     }
 
     // Filter
-    --filter-btn-color: #6C6C72;
+    --filter-btn-color: #6c6c72;
     --filter-btn-bg: #fff;
 
     // Product card
     --product-card-bg: #fff;
-    --product-card-shadow: rgba(237, 237, 246, 0.20);
-    
+    --product-card-shadow: rgba(237, 237, 246, 0.2);
+
     // Filter form
     --filter-form-bg: #fff;
-    --filter-form-shadow:  rgba(200, 200, 200, 0.40);
-    --filter-form-tag-color: #f8f8fb;
+    --filter-form-shadow: rgba(200, 200, 200, 0.4);
+    --form-tag-color: #f8f8fb;
     --footer-form-color: #fff;
 
-    // Footer 
+    // Footer
     --footer-bg-color: #eee;
     // Auth
     --auth-content-bg: #fff;
@@ -65,5 +65,4 @@ html {
     // Breakcrumbs
     --breadcrmbs-bg: #f6f6f6;
     --breadcrmbs-shadow: #f6f6f6;
-
 }

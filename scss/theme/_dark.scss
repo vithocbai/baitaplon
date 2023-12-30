@@ -43,27 +43,27 @@ html.dark {
     // Filter form
     --filter-form-bg: var(--dropdown-bg-color);
     --filter-form-shadow: rgba(0, 0, 0, 0.4);
-    --filter-form-tag-color: #171c28;
+    --form-tag-color: #171c28;
     --filter-form-arrow: var(--dropdown-arrow-color);
     --footer-form-color: var(--dropdown-bg-color);
 
-    // Footer 
+    // Footer
     --fotter-color-text: #9e9da6;
     --footer-bg-color: #171c28;
 
-     // Auth
-    --auth-content-bg: #292E39;
-    --auto-intro-bg: #171C28;
-    --auth-intro-text-color: #B9BABE;
-    --auth-heading-color: #B9BABE;
-   
-     // Form
-     --form-placeholder-color: #B9BABE;
+    // Auth
+    --auth-content-bg: #292e39;
+    --auto-intro-bg: #171c28;
+    --auth-intro-text-color: #b9babe;
+    --auth-heading-color: #b9babe;
 
-     // Product-detail
-     --product-detail-bg: #292E39;
+    // Form
+    --form-placeholder-color: #b9babe;
+
+    // Product-detail
+    --product-detail-bg: #292e39;
 
     // Breakcrumbs
     --breadcrmbs-bg: #171c28;
-    --breadcrmbs-shadow: rgba(23, 28, 40, 0.20);;
+    --breadcrmbs-shadow: rgba(23, 28, 40, 0.2);
 }
