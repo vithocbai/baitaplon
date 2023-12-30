@@ -171,6 +171,11 @@
   .top--action {
     margin-left: 0;
   }
+  .top--action__sign-up {
+    height: 40px !important;
+    padding: 0 8px !important;
+    font-size: 1.5rem !important;
+  }
 }
 .top--action__group {
   display: flex;

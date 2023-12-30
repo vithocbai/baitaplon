@@ -6,7 +6,7 @@
     background: var(--footer-bg-color);
     &__row {
         display: grid;
-        grid-template-columns: 2fr 1.3fr 1fr 1fr 1.5fr;
+        grid-template-columns:  2fr 1.3fr 1fr 1fr 1.5fr;
         gap: 60px;
 
         @include abstract.screen(lg) {
@@ -109,6 +109,9 @@
         align-items: center;
         gap: 8px;
         margin-top: 10px;
+        &-icon {
+          background: #ddd;
+        }
     }
 
     &__seperate {
@@ -165,7 +168,7 @@
             background: #f00;
         }
 
-        &_--tiktok {
+        &--tiktok {
             background: #000;
         }
 

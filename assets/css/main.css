@@ -1305,6 +1305,20 @@ a, img, button, input, textarea, select {
     display: none !important;
   }
 }
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 html.dark {
   --text-color: #ffffff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(44%)
@@ -1560,6 +1574,11 @@ html {
   .top--action {
     margin-left: 0;
   }
+  .top--action__sign-up {
+    height: 40px !important;
+    padding: 0 8px !important;
+    font-size: 1.5rem !important;
+  }
 }
 .top--action__group {
   display: flex;
@@ -1734,6 +1753,9 @@ html {
   gap: 8px;
   margin-top: 10px;
 }
+.footer__payments-icon {
+  background: #ddd;
+}
 .footer__seperate {
   margin-top: 25px;
   width: 98%;
@@ -1788,7 +1810,7 @@ html {
 .footer__socials-link--youtobe {
   background: #f00;
 }
-.footer__socials-link_--tiktok {
+.footer__socials-link--tiktok {
   background: #000;
 }
 .footer__socials-link--twitter {
@@ -2214,6 +2236,7 @@ html {
   align-items: center;
   justify-content: center;
   height: 46px;
+  gap: 10px;
   padding: 0 20px;
   border-radius: 6px;
   background: #f8f8fb;
@@ -2549,6 +2572,29 @@ html {
   display: flex;
   align-items: center;
 }
+@media (max-width: 991.98px) {
+  .form__group {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.form:has(:invalid) .form__submit-btn {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
+  border-color: red;
+  background: rgba(255, 0, 0, 0.1);
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__error,
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon-error {
+  display: block;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
+  display: none;
+}
 .form__text-input {
   display: flex;
   align-items: center;
@@ -2572,6 +2618,19 @@ html {
 }
 .form__input::placeholder {
   color: #9e9da8;
+}
+.form__error {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 10px;
+  color: red;
+  display: none;
+}
+.form__input-icon-error {
+  display: none;
+  margin-left: 12px;
+  animation: shake 0.8s;
 }
 .form__pull-right {
   margin-left: auto;
@@ -2636,14 +2695,29 @@ html {
 }
 .auth__intro, .auth__content {
   flex: 1;
+  padding: 0 30px;
 }
 .auth__intro {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 50px;
-  background-image: url("https://img.freepik.com/free-photo/grungy-white-background-natural-cement-stone-old-texture-as-retro-pattern-wall-conceptual-wall-banner-grunge-material-construction_1258-21336.jpg?size=626&ext=jpg&ga=GA1.1.1554230442.1699795127&semt=ais");
+}
+.auth__intro-logo, .auth__intro-next {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+}
+.auth__intro-logo {
+  top: 80px;
+}
+.auth__intro-next {
+  bottom: 50px;
+}
+.auth__intro-img {
+  max-width: 100%;
 }
 .auth__intro--text {
   max-width: 412px;
@@ -2653,7 +2727,19 @@ html {
   line-height: 144.444%;
 }
 .auth__content {
-  background-image: url("https://img.freepik.com/free-photo/grungy-white-background-natural-cement-stone-old-texture-as-retro-pattern-wall-conceptual-wall-banner-grunge-material-construction_1258-21336.jpg?size=626&ext=jpg&ga=GA1.1.1554230442.1699795127&semt=ais");
+  background: #fff;
+}
+@media (max-width: 767.98px) {
+  .auth__content {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    transition: translate 0.3s;
+    overflow-y: auto;
+  }
+  .auth__content.hide {
+    translate: 100%;
+  }
 }
 .auth__content-inner {
   display: flex;
@@ -2672,7 +2758,7 @@ html {
 }
 .auth__desc {
   margin-top: 10px;
-  padding: 0 30px;
+  padding: 0 20px;
   color: #9e9da8;
   font-size: 1.5rem;
   font-weight: 500;
@@ -2688,21 +2774,32 @@ html {
   line-height: 146.667%;
   color: #0071dc;
 }
+@media (max-width: 991.98px) {
+  .auth__link {
+    margin-left: 0;
+  }
+}
 .auth__btn-group {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
   margin-top: 50px;
 }
 .auth__btn {
   width: 100%;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 144.444%;
 }
 .auth__text {
-  color: #9E9DA8;
-  margin-top: 108px;
+  color: #9e9da8;
+  margin-top: 60px;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 144.444%;
+}
+.auth__text__link {
+  font-size: 1.8rem;
 }
 
 /*# sourceMappingURL=main.css.map */
