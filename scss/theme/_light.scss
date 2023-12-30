@@ -48,6 +48,14 @@ html {
     --filter-form-tag-color: #f8f8fb;
     --footer-form-color: #fff;
 
+    // Footer 
+    --footer-bg-color: #eee;
     // Auth
-    
+    --auth-content-bg: #fff;
+    @include abstract.screen(md) {
+        --auto-intro-bg: #fff;
+    }
+
+    // Form
+    --form-placeholder-color: #d2d1d6;
 }
